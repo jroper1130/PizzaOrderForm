@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Drill Demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link rel="stylesheet" href="./css/pizza.css">
+	</head>
+	<!--body-->
+	<body> 
+		<div id="menuBG">
+			<h1 style="margin:0 0px 0 20px;">Pizza Order</h1>
+			<!--tables-->	
+			<form id="frmMenu">
+				<div class="menu left">
+					<h3>Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+				</div>
+				<div class="menu right">
+					<h3>Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+				</div>
+					<div class="menu left">
+					<h3>Vegetables:</h3>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Onion"> Onion<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Green Pepper"> Green Pepper<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Olive"> Olive<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Jalapeno"> Jalapeno<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Tomato"> Tomato<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Mushroom"> Mushroom<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Pineapple"> Pineapple<br>
+					<input class="vegetables" type="checkbox" name="Vegetables" value="Spinach"> Spinach<br>			
+				</div>
+				<div class="menu right">
+					<h3>Cheese:</h3>
+					<input class="cheese" type="radio" name="Cheese" value="Regular Cheese" checked> Regular Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Extra">  Extra<br>
+					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br> 
+				</div>
+					<div class="menu left">
+					<h3>Crust:</h3>
+					<input class="crust" type="radio" name="Crust" value="Regular Crust" checked> Regular Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Garlic"> Garlic<br>
+					<input class="crust" type="radio" name="Crust" value="Cheese Stuffed"> Cheese Stuffed<br>
+					<input class="crust" type="radio" name="Crust" value="Spicy"> Spicy<br>
+					<input class="crust" type="radio" name="Crust" value="House Special"> House Special<br>
+				</div>
+				<div class="menu right">
+					<h3>Sauce:</h3>
+					<input class="sauce" type="radio" name="Sauce" value="None"> None<br>
+					<input class="sauce" type="radio" name="Sauce" value="Marinara" checked>  Marinara<br>
+					<input class="sauce" type="radio" name="Sauce" value="BBQ"> BBQ<br> 
+					<input class="sauce" type="radio" name="Sauce" value="White"> White<br>
+				</div>
+			</form>	
+            <br>
+			<!--Buttons-->
+			<div class="controls">		
+					<input id="btnOrder" class="button" onclick="getReceipt()" 
+						value="Place Order">
+					<input id="btnOrder" class="button" onclick="clearAll()" 
+						value="Cancel">
+				</div>
+			<div>
+				<!--receipt-->
+				<form>
+					<div id="cart" style="opacitey: 1;">
+						<div id="title1"><h3>You Ordered:</h3></div>
+						<div id="title2"><h3>Subtotal:</h3></div>
+						<div id="showText1"></div>
+						<div id="showText2"></div>
+						<div id="totalPrice1"><h3>Total Price:</h3></div>
+						<div id="totalPrice2"></div>
+					</div>
+				</form>
+			</div>	
+	</div>
+	<!--source-->
+	<div>
+		<script src="./js/pizza.js"></script>
+	</div>
+	</body>
+	<!--body-->
+</html>
